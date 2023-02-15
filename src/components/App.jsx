@@ -1,6 +1,8 @@
 import user from '../user/user.json';
+import data from '../data/data.json';
 import { TaskTitle } from './TaskTitle/TaskTitle';
 import { Profile } from './Profile/Profile';
+import { Statistics } from './Statistics/Statistics';
 
 export const App = () => {
   return (
@@ -25,6 +27,8 @@ export const App = () => {
         likes={user.stats.likes}
       />
       <TaskTitle text="2- Секція статистики" />
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
     </div>
   );
 };
