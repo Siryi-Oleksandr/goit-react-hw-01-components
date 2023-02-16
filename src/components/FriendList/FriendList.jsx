@@ -1,16 +1,18 @@
 import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 import PropTypes from 'prop-types';
+import { FriendContainer, FriendItem, FriendsList } from './FriendList.styled';
 
 export const FriendList = ({ friends }) => {
-  //   const { avatar, name, isOnline } = friends;
   return (
-    <ul className="friend-list">
-      {friends.map(({ id, avatar, name, isOnline }) => (
-        <li className="item" key={id}>
-          <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
-        </li>
-      ))}
-    </ul>
+    <FriendContainer>
+      <FriendsList>
+        {friends.map(({ id, avatar, name, isOnline }) => (
+          <FriendItem key={id}>
+            <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
+          </FriendItem>
+        ))}
+      </FriendsList>
+    </FriendContainer>
   );
 };
 

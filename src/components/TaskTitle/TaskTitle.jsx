@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
-import css from '../TaskTitle/TaskTitle.module.css';
+// import css from '../TaskTitle/TaskTitle.module.css';
+import { Title } from './TaskTitle.styled';
 
 export const TaskTitle = ({ text }) => {
-  return <h1 className={css.title}>{text}</h1>;
+  return <Title>{text}</Title>;
 };
 
 TaskTitle.propTypes = {
