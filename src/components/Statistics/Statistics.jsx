@@ -7,10 +7,10 @@ import {
 } from './Statistics.styled';
 import getRangomColor from 'utils/randomColor';
 
-export const Statistics = ({ title = null, stats }) => {
+export const Statistics = ({ title, stats }) => {
   return (
     <StatisticsCard>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
 
       <StatisticsList>
         {stats.map(({ id, label, percentage }) => {
