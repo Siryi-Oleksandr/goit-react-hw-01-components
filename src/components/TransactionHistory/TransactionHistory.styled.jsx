@@ -1,18 +1,5 @@
 import styled from '@emotion/styled';
 
-export const TransactionContainer = styled.div`
-  width: 500px;
-  margin-bottom: 32px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  border-radius: 8px;
-`;
-
 export const Table = styled.table`
   min-width: 600px;
   margin: 0 auto;
@@ -43,9 +30,14 @@ export const TableBody = styled.tbody`
     padding: 16px;
     color: gray;
     text-transform: capitalize;
+    transition: all 100ms ease-in-out;
 
     &:nth-of-type(2n) {
       background-color: #cccccc90;
+    }
+    &:hover {
+      background-color: #125aa39f;
+      color: #fff;
     }
   }
 
